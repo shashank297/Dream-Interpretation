@@ -45,7 +45,7 @@ input = st.text_input("Input: ", key="input")
 submit = st.button("Ask the question")
 
 if submit and input:
-    response = get_gemini_response(f'This is a queary:- {input} Give me a output for this one simmilar like below mention\n {Prompt}')
+    response = get_gemini_response(f'This is a queary:- {input} Give me a output for this one simmilar like below mention and alway give me an ans in para\n {Prompt}')
 
     # Add user query and response to session state chat history
     st.session_state['chat_history'].append(("You", input))
